@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGMAS BURGER | Hamburgueria Artesanal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><img src="SIGMAS BURGER.png" alt="SIGMAS BURGER"></div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#menu">Cardápio</a></li>
+                    <li><a href="#promocoes">Promoções</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#avaliacoes">Avaliações</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HOME / BANNER -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Os Hambúrgueres TEM</h1>
+                <p>O sABOOOR DE OUTRA GALÁXIA.</p>
+                <a href="#menu" class="btn-primary">Ver Cardápio</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CARDÁPIO -->
+        <section id="menu" class="section-container">
+            <h2 class="section-title">Nosso Cardápio</h2>
+            <div class="grid-container">
+                <div class="burger-card" onclick="openLightbox('classico.jpg', 'Burger Clássico')">
+                    <div class="card-img">
+                        <img src="classico.jpg" alt="Burger Clássico">
+                    </div>
+                    <div class="card-info">
+                        <h3>Burger Clássico</h3>
+                        <p>Carne 180g, queijo cheddar, alface, tomate</p>
+                    </div>
+                </div>
+
+                <div class="burger-card" onclick="openLightbox('bacon_burger_-_01.webp', 'Burger Especial')">
+                    <div class="card-img">
+                        <img src="bacon_burger_-_01.webp" alt="Burger Especial">
+                    </div>
+                    <div class="card-info">
+                        <h3>Burger Especial</h3>
+                        <p>Dupla de carnes, bacon, cebola roxa, maionese artesanal</p>
+                    </div>
+                </div>
+                <center><div class="burger-card" onclick="openLightbox('vegetariano.jpg', 'Burger Vegetariano')">
+                    <div class="card-img">
+                        <img src="vegetariano.jpg" alt="Burger Vegetariano">
+                    </div>
+                    <div class="card-info">
+                        <h3>Burger Vegetariano</h3>
+                        <p>Disco de abóbora, queijo suíço, pesto, rúcula fresca</p>
+                    </div>
+                </div></center>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PROMOÇÕES -->
+        <section id="promocoes" class="section-container bg-alt">
+            <h2 class="section-title">Promoções Imperdíveis</h2>
+            <div class="grid-container">
+                 <span class="tooltip">
+                    Combo Família        
+                    <span class="tooltip-box">
+            <img src="combo familia.webp" alt="combo familia">
+            <p>R$59,90 <br>3 Burgers + 2 Refris</p>
+        </span>
+    </span>
+        
+    <span class="tooltip">
+        Pizza Burger
+        <span class="tooltip-box">
+            <img src="PIZZA BURGUER.jpg" alt="Pizza Burger">
+            <p>R$15,90 <br>1 Pizza Burger</p>
+        </span>
+    </span>
+
+        </section>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="section-container">
+            <div class="about-content">
+                <h2 class="section-title">Sobre a SIGMAS BURGER</h2>
+                <p><strong>O BURGER CANTA PRA MIM!!!!</strong></p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO LOCALIZAÇÃO -->
+        <section id="localizacao" class="section-container bg-alt">
+            <h2 class="section-title">Nos Visite</h2>
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps?q=NASA+Johnson+Space+Center,+Houston,+TX&output=embed"
+                    width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- SEÇÃO AVALIAÇÕES -->
+        <section id="avaliacoes" class="section-container">
+            <h2 class="section-title">Avaliações dos Clientes</h2>
+            <div class="review-layout">
+                <div class="review-form-container">
+                    <form id="review-form">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Avaliação</label>
+                            <select id="rating" required>
+                                <option value="5">5 - Excelente</option>
+                                <option value="4">4 - Bom</option>
+                                <option value="3">3 - Regular</option>
+                                <option value="2">2 - Ruim</option>
+                                <option value="1">1 - Péssimo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comentário</label>
+                            <textarea id="comment" rows="4" placeholder="O que você achou do nosso hambúrguer?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Avaliação</button>
+                    </form>
+                </div>
+                <div class="reviews-display" id="reviews-display">
+                    <div class="review-card">
+                        <p><strong>Reinhardt</strong> - <span class="stars">★★★★★</span></p>
+                        <p>"Hambúrguer delicioso! Senti o sabor incrível!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO -->
+        <section id="contato" class="section-container bg-alt">
+            <h2 class="section-title">Contato e Delivery</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> pedidos@sigmasburger.com</p>
+                <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</p>
+                <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Faça Seu Pedido
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SIGMAS<span>BURGER</span></div>
+                <p>&copy; 2026 Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
